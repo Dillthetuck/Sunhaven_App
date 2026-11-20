@@ -1,0 +1,116 @@
+{
+  "fictional": true,
+  "purpose": "Design-only sample. No actual policy or coverage assertions.",
+  "account": {
+    "id": "demo-account-001",
+    "name": "Demo Investor Portfolio",
+    "owner": "Demo Sunhaven Specialist"
+  },
+  "entities": [
+    {
+      "id": "demo-entity-a",
+      "name": "Example Holdings LLC",
+      "authorization": "verified-demo"
+    },
+    {
+      "id": "demo-entity-b",
+      "name": "Example Rentals LLC",
+      "authorization": "pending-demo"
+    }
+  ],
+  "properties": [
+    {
+      "id": "demo-property-1",
+      "label": "Example Property One",
+      "entity_id": "demo-entity-a",
+      "stage": "rehab",
+      "confirmed": true
+    },
+    {
+      "id": "demo-property-2",
+      "label": "Example Property Two",
+      "entity_id": "demo-entity-a",
+      "stage": "rented",
+      "confirmed": true
+    },
+    {
+      "id": "demo-property-3",
+      "label": "Example Property Three",
+      "entity_id": "demo-entity-b",
+      "stage": "rented",
+      "confirmed": false
+    },
+    {
+      "id": "demo-property-4",
+      "label": "Example Property Four",
+      "entity_id": "demo-entity-b",
+      "stage": "vacant",
+      "confirmed": true
+    }
+  ],
+  "policies": [
+    {
+      "id": "demo-policy-1",
+      "carrier": "Fictional Carrier",
+      "property_ids": [
+        "demo-property-1"
+      ],
+      "document_status": "partial"
+    },
+    {
+      "id": "demo-policy-2",
+      "carrier": "Fictional Portfolio Carrier",
+      "property_ids": [
+        "demo-property-2",
+        "demo-property-3"
+      ],
+      "document_status": "received-unreviewed"
+    }
+  ],
+  "requests": [
+    {
+      "id": "demo-request-1",
+      "entity_id": "demo-entity-a",
+      "contact": "Fictional Existing Agent",
+      "status": "partial-response",
+      "next_action": "Staff request missing endorsements",
+      "investor_action_needed": false
+    },
+    {
+      "id": "demo-request-2",
+      "entity_id": "demo-entity-b",
+      "contact": null,
+      "status": "assistance-required",
+      "next_action": "Arrange help call",
+      "investor_action_needed": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "demo-finding-1",
+      "property_id": "demo-property-2",
+      "status": "published",
+      "type": "potential-issue",
+      "text": "Reported occupancy differs from the document on file. Reviewer recommends confirming the current policy and occupancy details.",
+      "reviewer": "Demo Licensed Reviewer",
+      "evidence": "Illustrative document only"
+    },
+    {
+      "id": "demo-finding-2",
+      "property_id": "demo-property-1",
+      "status": "draft",
+      "type": "missing-information",
+      "text": "Review requires missing endorsements.",
+      "reviewer": null,
+      "evidence": null
+    }
+  ],
+  "changes": [
+    {
+      "property_id": "demo-property-2",
+      "type": "tenant-move-in",
+      "status": "assigned-for-review",
+      "coverage_updated": false
+    }
+  ]
+}
